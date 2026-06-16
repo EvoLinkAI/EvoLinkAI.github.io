@@ -19,3 +19,13 @@ We only publish named partner assets after maintainer confirmation.
 
 Maintainers who have merged Evolink or compatible provider support can reply in the merged PR thread or contact Evolink Partnerships to approve the public listing.
 
+## Program Update: June 17, 2026
+
+The first activation batch is now running:
+
+- Initial post-merge outreach has been sent for 5 merged projects.
+- Each contacted project has a GitHub tracking issue for reply status, approval gates, content assets, and follow-up timing.
+- Public partner cards remain gated on maintainer confirmation.
+- The next no-reply follow-up is scheduled for June 22, 2026.
+
+This keeps the program public and auditable without publishing named partner promotions before maintainers approve them.
