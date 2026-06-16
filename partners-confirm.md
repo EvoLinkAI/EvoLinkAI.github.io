@@ -72,7 +72,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
   const setLink = function (selector, value) {
     const node = document.querySelector(selector);
     if (!node) return;
-    if (value) {
+    if (value && /^https?:\/\//i.test(value)) {
       node.textContent = value;
       node.href = value;
     } else {
@@ -92,7 +92,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
   const status = document.getElementById("partner-confirmation-copy-status");
   textarea.value = body;
   const refreshMailto = function () {
-    mailto.href = "mailto:" + encodeURIComponent(recipient) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
+    mailto.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
   };
   textarea.addEventListener("input", refreshMailto);
   refreshMailto();
