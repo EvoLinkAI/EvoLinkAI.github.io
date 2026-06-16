@@ -21,6 +21,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
 
   <p>
     <a id="partner-confirmation-mailto" href="mailto:partnerships@evolink.ai" style="display: inline-block; padding: 10px 14px; border-radius: 6px; background: #111827; color: #fff; text-decoration: none;">Send confirmation email</a>
+    <a id="partner-confirmation-github" href="https://github.com/EvoLinkAI/EvoLinkAI.github.io/issues/new" style="display: inline-block; padding: 10px 14px; border-radius: 6px; border: 1px solid #111827; background: #fff; color: #111827; text-decoration: none; margin-left: 8px;">Open GitHub confirmation issue</a>
     <button id="partner-confirmation-copy" type="button" style="padding: 10px 14px; border-radius: 6px; border: 1px solid #d8dee4; background: #fff; color: #111827;">Copy draft</button>
     <span id="partner-confirmation-copy-status" style="margin-left: 8px;"></span>
   </p>
@@ -30,6 +31,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
 (function () {
   const params = new URLSearchParams(window.location.search);
   const recipient = "partnerships@evolink.ai";
+  const githubRepo = "EvoLinkAI/EvoLinkAI.github.io";
   const get = function (key, fallback) {
     const value = params.get(key);
     return value && value.trim() ? value.trim() : fallback;
@@ -88,11 +90,13 @@ This page prepares a structured confirmation email for an Evolink open-source pa
 
   const textarea = document.getElementById("partner-confirmation-notes");
   const mailto = document.getElementById("partner-confirmation-mailto");
+  const githubIssue = document.getElementById("partner-confirmation-github");
   const copy = document.getElementById("partner-confirmation-copy");
   const status = document.getElementById("partner-confirmation-copy-status");
   textarea.value = body;
   const refreshMailto = function () {
     mailto.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
+    githubIssue.href = "https://github.com/" + githubRepo + "/issues/new?title=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
   };
   textarea.addEventListener("input", refreshMailto);
   refreshMailto();
