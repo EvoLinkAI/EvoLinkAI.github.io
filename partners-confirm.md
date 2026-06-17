@@ -21,7 +21,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
 
   <p>
     <a id="partner-confirmation-mailto" href="mailto:partnerships@evolink.ai" style="display: inline-block; padding: 10px 14px; border-radius: 6px; background: #111827; color: #fff; text-decoration: none;">Send confirmation email</a>
-    <a id="partner-confirmation-github" href="https://github.com/EvoLinkAI/EvoLinkAI.github.io/issues/new" style="display: inline-block; padding: 10px 14px; border-radius: 6px; border: 1px solid #111827; background: #fff; color: #111827; text-decoration: none; margin-left: 8px;">Open GitHub confirmation issue</a>
+    <a id="partner-confirmation-github" href="https://github.com/EvoLinkAI/EvoLinkAI.github.io/issues/new?template=partner-confirmation.yml" style="display: inline-block; padding: 10px 14px; border-radius: 6px; border: 1px solid #111827; background: #fff; color: #111827; text-decoration: none; margin-left: 8px;">Open GitHub confirmation issue</a>
     <button id="partner-confirmation-copy" type="button" style="padding: 10px 14px; border-radius: 6px; border: 1px solid #d8dee4; background: #fff; color: #111827;">Copy draft</button>
     <span id="partner-confirmation-copy-status" style="margin-left: 8px;"></span>
   </p>
@@ -96,7 +96,7 @@ This page prepares a structured confirmation email for an Evolink open-source pa
   textarea.value = body;
   const refreshMailto = function () {
     mailto.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
-    githubIssue.href = "https://github.com/" + githubRepo + "/issues/new?title=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
+    githubIssue.href = "https://github.com/" + githubRepo + "/issues/new?template=partner-confirmation.yml&title=" + encodeURIComponent(subject);
   };
   textarea.addEventListener("input", refreshMailto);
   refreshMailto();
