@@ -96,7 +96,17 @@ This page prepares a structured confirmation email for an Evolink open-source pa
   textarea.value = body;
   const refreshMailto = function () {
     mailto.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(textarea.value);
-    githubIssue.href = "https://github.com/" + githubRepo + "/issues/new?template=partner-confirmation.yml&title=" + encodeURIComponent(subject);
+    const issueParams = new URLSearchParams({
+      template: "partner-confirmation.yml",
+      title: subject,
+      body: textarea.value,
+      partner_slug: partner,
+      project: project,
+      support: support,
+      pr_url: pr,
+      tracking_link: tracking
+    });
+    githubIssue.href = "https://github.com/" + githubRepo + "/issues/new?" + issueParams.toString();
   };
   textarea.addEventListener("input", refreshMailto);
   refreshMailto();
