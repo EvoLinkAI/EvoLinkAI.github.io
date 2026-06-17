@@ -1,0 +1,101 @@
+name: Partner confirmation
+description: Confirm an approved Evolink open-source partner listing.
+title: "Partner confirmation: "
+labels:
+  - partner-confirmation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Partner confirmation
+
+        Use this form only if you maintain the project named in the Evolink partner outreach.
+        Evolink will not publish partner-specific listing assets until confirmation is recorded.
+  - type: input
+    id: partner_slug
+    attributes:
+      label: Partner slug
+      description: Copy this from the confirmation link, for example promptfoo-promptfoo.
+      placeholder: promptfoo-promptfoo
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      placeholder: owner/repo or project name
+    validations:
+      required: true
+  - type: input
+    id: support
+    attributes:
+      label: Support
+      placeholder: Evolink
+    validations:
+      required: true
+  - type: input
+    id: pr_url
+    attributes:
+      label: PR URL
+      placeholder: https://github.com/owner/repo/pull/123
+  - type: input
+    id: tracking_link
+    attributes:
+      label: Tracking link
+      placeholder: https://...
+  - type: dropdown
+    id: listing_approval
+    attributes:
+      label: Evolink may list this project on the public Partners page
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: one_line_description
+    attributes:
+      label: Approved one-line description
+      description: A short public description Evolink may use if listing is approved.
+      placeholder: A concise description of the project and Evolink support.
+  - type: input
+    id: preferred_project_url
+    attributes:
+      label: Preferred project URL
+      placeholder: https://github.com/owner/repo
+  - type: textarea
+    id: logo_note
+    attributes:
+      label: Logo or avatar URL / attachment note
+      placeholder: Link to a logo/avatar, or say GitHub avatar is OK.
+  - type: dropdown
+    id: docs_ownership
+    attributes:
+      label: README/docs ownership
+      options:
+        - partner team
+        - Evolink follow-up PR
+        - not needed
+  - type: input
+    id: docs_reviewer
+    attributes:
+      label: Best docs reviewer or contact
+      placeholder: GitHub handle or email
+  - type: dropdown
+    id: blog_approval
+    attributes:
+      label: Blog approval
+      options:
+        - "Yes"
+        - "No"
+        - Later
+  - type: input
+    id: x_approval
+    attributes:
+      label: X announcement approval and handle
+      placeholder: Yes @handle / No / Later
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Anything Evolink should know before publishing.
