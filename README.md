@@ -65,7 +65,7 @@ No vendor lock-in. No juggling multiple SDKs. No surprise bills. Each call is in
 
 | Provider | Models |
 |----------|--------|
-| BytePlus | Seedance 2.0, Seedance Pro, Seedance 1.5 Pro |
+| BytePlus | [Seedance 2.5 Early Access](https://evolink.ai/launch/seedance-2-5), Seedance 2.0, Seedance Pro, Seedance 1.5 Pro |
 | Kling | Kling 3.0, Kling o1, Kling 2.0, Kling 1.6 |
 | OpenAI | Sora 2 |
 | Google | Veo 3.1, Veo 3.1 Fast |
@@ -165,7 +165,7 @@ Every call is routed to the lowest-cost stable option. A few examples:
 | Model | Starting Price |
 |-------|---------------|
 | Nano Banana 2 | from $0.036/img (47% off) |
-| Seedance 2.0 | from $0.177/s |
+| Seedance 2.5 Early Access | [join rollout](https://evolink.ai/launch/seedance-2-5) |
 | Veo 3.1 Fast | from $0.125/s |
 | Kling 3.0 | from $0.075/s |
 | Sora 2 | from $0.210/s |
